@@ -15,16 +15,10 @@ public class Main1 {
         var passRepository = ctx.getBean(PassengerRepository.class);
         var planeRepository = ctx.getBean(AirplaneRepository.class);
 
-
         var passengers = (List<Passenger>)ctx.getBean("passengers");
         passRepository.saveAll(passengers);
 
-
-
-
         var flight_BRU_982 = ctx.getBean("airbus360", Airplane.class);
         planeRepository.save(flight_BRU_982);
-
     }
 }
-///////

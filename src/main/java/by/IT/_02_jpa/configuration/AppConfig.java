@@ -26,7 +26,7 @@ public class AppConfig {
     public LocalContainerEntityManagerFactoryBean factory(JpaVendorAdapter vendorAdapter) {
         var container = new LocalContainerEntityManagerFactoryBean();
         container.setJpaVendorAdapter(vendorAdapter);
-        container.setPackagesToScan("by.IT._02_jpa.entties");
+        container.setPackagesToScan("by.itclass._02_jpa.entities");
         return container;
     }
 
@@ -40,20 +40,23 @@ public class AppConfig {
     @Bean
     public Airplane boeing747() {
         return new Airplane("Boeing-747", 150);
+    }
 
+    @Bean
+    public Airplane airbus360() {
+        return new Airplane("Airbus-360", 360);
+    }
 
-       @Bean
-        public Airplane airbus360(){
-    return new Airplane("Airbus-360", 360);
-        }
-       //////
-
-        public List<Passenger>
+    @Bean
+    public List<Passenger> passengers() {
+        return List.of(
+                new Passenger("Vano"),
+                new Passenger("Petro"),
+                new Passenger("Sergo"),
+                new Passenger("Janna")
+        );
     }
 }
-
-
-
 
 
 
