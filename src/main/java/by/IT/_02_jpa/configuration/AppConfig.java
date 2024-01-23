@@ -2,6 +2,7 @@ package by.IT._02_jpa.configuration;
 
 
 import by.IT._02_jpa.entties.Airplane;
+import by.IT._02_jpa.entties.Passenger;
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
@@ -10,6 +11,8 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+
+import java.util.List;
 
 @EnableJpaRepositories(basePackages = "by.IT._02_jpa.reposotories")
 public class AppConfig {
@@ -39,8 +42,13 @@ public class AppConfig {
         return new Airplane("Boeing-747", 150);
 
 
-
+       @Bean
+        public Airplane airbus360(){
+    return new Airplane("Airbus-360", 360);
+        }
        //////
+
+        public List<Passenger>
     }
 }
 

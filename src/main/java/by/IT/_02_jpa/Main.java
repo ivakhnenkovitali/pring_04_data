@@ -8,8 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
-          var ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-         var repository = ctx.getBean(AirplaneRepository.class);
+        var ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+        var repository = ctx.getBean(AirplaneRepository.class);
         /// var airplane = ctx.getBean("boeing747", Airplane.class);
 
 
@@ -24,9 +24,18 @@ public class Main {
         ////   airplane = repository.save(airplane);
         ////   System.out.println("Airplane after update : " + airplane);
 
- ///  var boeing = repository.findByModelLike("Boe%");
-  //// var airbus = repository.findByModelLike("Air%", 350);
-     ////   System.out.println(boeing);
-      ///  System.out.println(airbus);
+        ///  var boeing = repository.findByModelLike("Boe%");
+        //// var airbus = repository.findByModelLike("Air%", 350);
+        ////   System.out.println(boeing);
+        ///  System.out.println(airbus);
+
+        var planes = repository.findByPlaceBetween(100, 550);
+        planes.forEach(System.out::println);
+        System.out.println("_______________________________");
+        planes = repository.allPlanes();
+        planes.forEach(System.out::println);
+        System.out.println("_______________________________");
+        planes = repository.concretePlains("Boei%", 200);
+        planes.forEach(System.out::println);
     }
 }
