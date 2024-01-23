@@ -47,7 +47,7 @@
 
         <dependency>
             <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-commons</artifactId>
+            <artifactId>spring-data-jpa</artifactId>
             <version>3.2.1</version>
         </dependency>
     </dependencies>
