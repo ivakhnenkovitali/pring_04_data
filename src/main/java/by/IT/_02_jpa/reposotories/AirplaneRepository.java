@@ -2,6 +2,7 @@ package by.IT._02_jpa.reposotories;
 
 
 import by.IT._02_jpa.entties.Airplane;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+@Transactional
 public interface AirplaneRepository extends CrudRepository<Airplane, Integer> {
     ///find, get, query, delete, update
     ///By
