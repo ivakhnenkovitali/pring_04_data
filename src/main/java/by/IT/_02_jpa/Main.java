@@ -14,14 +14,6 @@ public class Main {
         //var airbus = ctx.getBean("airbus360", Airplane.class);
         //System.out.println("We just created : " + boeing);
 
-        //        repository.save(airbus);
-        //        boeing = repository.save(boeing);
-        //        System.out.println("Airplane after save : " + boeing);
-        //
-        //        boeing.setPlace(250);
-        //        boeing = repository.save(boeing);
-        //        System.out.println("Airplane after update : " + boeing);
-
         var boeing = repository.findByModelLike("Boe%");
         var airbus = repository.findByModelLikeOrPlace("Air%", 350);
         System.out.println(boeing);
