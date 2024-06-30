@@ -1,11 +1,8 @@
 package by.IT._02_jpa;
-
-
 import by.IT._02_jpa.configuration.AppConfig;
 import by.IT._02_jpa.entties.Airplane;
 import by.IT._02_jpa.reposotories.AirplaneRepository;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 public class Main {
     public static void main(String[] args) {
         var ctx = new AnnotationConfigApplicationContext(AppConfig.class);
