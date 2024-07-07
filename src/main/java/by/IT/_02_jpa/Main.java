@@ -10,7 +10,6 @@ public class Main {
         //var boeing = ctx.getBean("boeing747", Airplane.class);
         //var airbus = ctx.getBean("airbus360", Airplane.class);
         //System.out.println("We just created : " + boeing);
-
         var boeing = repository.findByModelLike("Boe%");
         var airbus = repository.findByModelLikeOrPlace("Air%", 350);
         System.out.println(boeing);
