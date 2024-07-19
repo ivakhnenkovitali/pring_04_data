@@ -11,7 +11,6 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc -->
         <dependency>
             <groupId>org.springframework.data</groupId>
