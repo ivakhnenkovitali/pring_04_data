@@ -19,9 +19,7 @@ public class AppConfig {
     @Bean
     public JpaVendorAdapter vendorAdapter() {
         return new HibernateJpaVendorAdapter();
-
     }
-
     @Bean(name = "entityManagerFactory")
     public LocalContainerEntityManagerFactoryBean factory(JpaVendorAdapter vendorAdapter) {
         var container = new LocalContainerEntityManagerFactoryBean();
@@ -29,7 +27,6 @@ public class AppConfig {
         container.setPackagesToScan("by.itclass._02_jpa.entities");
         return container;
     }
-
     @Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         var transactionManager = new JpaTransactionManager();
