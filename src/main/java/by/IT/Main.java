@@ -18,6 +18,5 @@ public class Main {
              .forEach(System.out::println);
         System.out.println("_____________________________________________");
         jdbcTemplate.update("UPDATE  user  SET  name = ? WHERE  id = ?", "Vasiok Pupkrin", 1);
-
     }
 }
