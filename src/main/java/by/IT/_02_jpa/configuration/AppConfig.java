@@ -13,7 +13,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import java.util.List;
-
 @EnableJpaRepositories(basePackages = "by.IT._02_jpa.reposotories")
 public class AppConfig {
     @Bean
