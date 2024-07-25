@@ -8,7 +8,6 @@ import by.IT._02_jpa.reposotories.PassengerRepository;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
-
 public class Main1 {
     public static void main(String[] args) {
         var ctx = new AnnotationConfigApplicationContext(AppConfig.class);
